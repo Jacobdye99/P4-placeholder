@@ -89,7 +89,7 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 > Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
 
-[Component Tree](https://github.com/Jacobdye99/P4-placeholder/blob/main/Assets/Heirarchy.png?raw=true)
+![Component Tree](https://github.com/Jacobdye99/P4-placeholder/blob/main/Assets/Heirarchy.png?raw=true)
 
 #### Component Architecture
 
