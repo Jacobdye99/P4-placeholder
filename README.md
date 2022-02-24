@@ -77,6 +77,9 @@ _**Review.io** The goal of this site is to be able to login and create reviews o
 ![Movie Detail Page](https://github.com/Jacobdye99/Review.io/blob/main/Assets/P4%20(5).png?raw=true)
 
 
+![Phone Page](https://github.com/Jacobdye99/Review.io/blob/main/Assets/P4%20(6).png?raw=true)
+
+
 
 #### Component Tree
 
