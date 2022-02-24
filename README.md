@@ -104,9 +104,22 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Create Backend framework   |    H     |     2 hrs      |     TBD     |    TBD    |
+| Create CRUD Actions |    H     |     2 hrs      |     TBD     |     TBD     |
+| Test Routes |    H     |     1.5 hrs      |     TBD     |     TBD     |
+| Implement Auth |    H     |     2 hrs      |     TBD     |     TBD     |
+| test backend and Deploy |    H     |     2.5 hrs      |     TBD     |     TBD     |
+| Create Front End Framework |    H     |     3 hrs      |     TBD     |     TBD     |
+| Implement Api Config for backend and External |    H     |     3 hrs      |     TBD     |     TBD     |
+| Create Components and test |    H     |     3 hrs      |     TBD     |     TBD     |
+| Create Screens |    H     |     3 hrs      |     TBD     |     TBD     |
+| Implement Login & Register |    H     |     3 hrs      |     TBD     |     TBD     |
+| Implement functionality for reviews and Comments |    H     |     4 hrs      |     TBD     |     TBD     |
+| Style and test |    H     |     4 hrs      |     TBD     |     TBD     |
+| Implement a css library |    H     |     3 hrs      |     TBD     |     TBD     |
+| Debug |    H     |     4 hrs      |     TBD     |     TBD     |
+| Post-MVP |    L     |     4 hrs      |     TBD     |     TBD     |
+| TOTAL               |   44 hrs       |     TBD      |     TBD     |     TBD     |
 
 
 <br>
@@ -121,8 +134,11 @@ src
 ***
 
 ## Post-MVP
+-_Friends
+-_Comments & likes on comments
+-_dynamic hero banner
+-_seeing other peoples profile pages maybe a follow system
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
 
 ***
 
