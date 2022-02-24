@@ -59,31 +59,26 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
+
 
 ![Wireframes](https://raw.githubusercontent.com/Jacobdye99/P4-placeholder/main/Assets/P4.png)
 
-- Desktop Landing
 
-![Dummy Link](url)
+![Wireframes Reviews](https://github.com/Jacobdye99/Review.io/blob/main/Assets/P4%20(1).png?raw=true)
 
-- Desktop Hero
 
-![Dummy Link](url)
+![Wireframes Profile Page](https://github.com/Jacobdye99/Review.io/blob/main/Assets/P4%20(2).png?raw=true)
 
-- Resource Index
 
-![Dummy Link](url)
+![Login Page](https://github.com/Jacobdye99/Review.io/blob/main/Assets/P4%20(3).png?raw=true)
 
-- Resource Show
 
-![Dummy Link](url)
+![Registration](https://github.com/Jacobdye99/Review.io/blob/main/Assets/P4%20(4).png?raw=true)
 
-- Tablet Resource Index
 
-![Dummy Link](url)
+![Movie Detail Page](https://github.com/Jacobdye99/Review.io/blob/main/Assets/P4%20(5).png?raw=true)
 
-- Mobile Resource Index
+
 
 #### Component Tree
 
