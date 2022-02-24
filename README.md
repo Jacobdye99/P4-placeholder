@@ -122,7 +122,7 @@ src
 | Implement a css library |    H     |     3 hrs      |     TBD     |     TBD     |
 | Debug |    H     |     4 hrs      |     TBD     |     TBD     |
 | Post-MVP |    L     |     4 hrs      |     TBD     |     TBD     |
-| TOTAL               |   44 hrs       |     TBD      |     TBD     |     TBD     |
+| TOTAL               |    H     |     44 hrs      |     TBD     |     TBD     |
 
 
 <br>
