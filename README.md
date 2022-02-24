@@ -129,7 +129,7 @@ src
 
 > Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 
-[ERD Review.io](https://githubusercontent.com/Jacobdye99/P4-placeholder/main/Assets/Untitled%20Diagram.drawio.png)
+[ERD Review.io](https://github.com/Jacobdye99/P4-placeholder/blob/main/Assets/Untitled%20Diagram.drawio.png?raw=true)
 <br>
 
 ***
