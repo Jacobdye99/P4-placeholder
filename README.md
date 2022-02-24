@@ -137,10 +137,10 @@ src
 ***
 
 ## Post-MVP
-| Friends |
-| Comments & likes on comments |
-| dynamic hero banner |
-| seeing other peoples profile pages maybe a follow system |
+-Friends 
+-Comments & likes on comments
+-dynamic hero banner
+-seeing other peoples profile pages maybe a follow system
 
 
 ***
