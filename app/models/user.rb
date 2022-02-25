@@ -1,5 +1,10 @@
 class User < ApplicationRecord
-  belongs_to :user
-  belongs_to :user
-  belongs_to :review
+  has_many :reviews, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :favorites, dependent: :destroy
+  has_secure_password
+  
+  validates :username, presence: true, uniqueness: true
+  validates :email, presence: true, uniqueness: true
+  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
 end

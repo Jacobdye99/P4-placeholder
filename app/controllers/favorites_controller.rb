@@ -8,6 +8,11 @@ class FavoritesController < ApplicationController
     render json: @favorites
   end
 
+  def get_user_favorites
+    @user = User.find(params[:user_id])
+    render json: @user.favorites
+  end
+
   # GET /favorites/1
   def show
     render json: @favorite
