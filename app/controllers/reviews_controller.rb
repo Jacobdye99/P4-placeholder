@@ -14,6 +14,16 @@ class ReviewsController < ApplicationController
     render json: @review
   end
 
+  def get_all_reviews
+    @reviews = Review.all
+    render json: @reviews
+  end
+  
+  def get_user_reviews
+    @user = User.find(params[:user_id])
+    render json: @user.reviews
+  end
+
   # POST /reviews
   def create
     @review = Review.new(review_params)
