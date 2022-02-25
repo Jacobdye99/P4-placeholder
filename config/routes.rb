@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  resources :favorites
-  resources :comments
-  resources :reviews
-  resources :users
+  resources :reviews do
+    resources :comments
+  end
+  resources :users do
+    resources :favorites
+  end
 
   get '/users/:user_id/favorites', to: 'favorites#get_user_favorites'
   get '/users/:user_id/reviews', to: 'reviews#get_user_reviews'

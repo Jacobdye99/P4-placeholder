@@ -23,6 +23,8 @@ class CommentsController < ApplicationController
   # POST /comments
   def create
     @comment = Comment.new(comment_params)
+    @comment.user = @current_user
+    @comment.review_id = params[:review_id]
 
     if @comment.save
       render json: @comment, status: :created
