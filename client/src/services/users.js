@@ -22,3 +22,23 @@ export const verifyUser = async () => {
     }
     return false
 }
+
+export const getAllUsers = async () => {
+    const res = await api.get('/users')
+    return res.data
+}
+
+export const getOneUser = async (user_id) => {
+    const res = await api.get(`/users/${user_id}`)
+    return res.data
+}
+
+export const updateUser = async (user_id, updateUser) => {
+    const res = await api.put(`/users/${user_id}`, {user: updateUser})
+    return res.data
+}
+
+export const deleteUser = async (user_id) => {
+    const res = await api.delete(`/users/${user_id}`)
+    return res.data
+}
