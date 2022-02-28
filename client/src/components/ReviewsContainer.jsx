@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
 import {Routes, Route, useNavigate} from "react-router-dom"
 import { getAllReviews, deleteReview, createReview, updateReview } from "../services/reviews"
+import Reviews from "./Reviews"
 
-export default function ReviewsContainer() {
+export default function ReviewsContainer(props) {
     const [reviews, setReviews] = useState([])
     const [toggle, setToggle] = useState(false)
     const navigate = useNavigate()
@@ -35,7 +36,10 @@ export default function ReviewsContainer() {
   return (
     <div>
         <Routes>
-            
+            <Route path="/" element={<Reviews 
+            reviews={reviews}
+            currentUser={props.currentUser}
+            />} />
         </Routes>
     </div>
   )

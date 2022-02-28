@@ -26,9 +26,9 @@ function App() {
     
     <Routes>
     <Route path='/' element={<h1>Hello</h1>} />
-    <Route path='/reviews/*' element={<h1>Reviews</h1>} />
+    <Route path='/reviews/*' element={<ReviewsContainer currentUser={currentUser} />} />
     <Route path='/movies/:id' element={<h1>MovieDetails</h1>} />
-    <Route path='/user/:id' element={<ReviewsContainer currentUser={currentUser} />} />
+    <Route path='/user/:id' element={<h1>Movies</h1>} />
     </Routes>  
     </div>
   );
