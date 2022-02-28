@@ -12,6 +12,7 @@ export default function Reviews(props) {
                 <h4>{review.review}</h4>
             </Link>
                 <h5>{review.likes}</h5>
+                
                 </div>
         )})}
     </div>
