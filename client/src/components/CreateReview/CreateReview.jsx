@@ -17,7 +17,7 @@ export default function CreateReview(props) {
   const handleCreate = async (data) => {
     await createReview(data)
     setToggle(prevToggle => !prevToggle)
-    navigate('/reviews')
+    // navigate('/reviews')
 }
 const handleTextInput = (e) => {
   e.preventDefault()
@@ -31,9 +31,10 @@ const handleTextInput = (e) => {
   // console.log(props.reviews)
 
   return (
-    <form>
+    <form onSubmit={() => handleCreate(data)}>
       <textarea type='text' id='review' onChange={handleTextInput}  />
       <StarRating handleTextInput={handleTextInput} stars={data.stars}/>
+      <button>Post</button>
     </form>
   )
 }
