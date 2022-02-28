@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import {Routes, Route, useNavigate} from "react-router-dom"
-import { getAllReviews, deleteReview, createReview, updateReview } from "../services/reviews"
+import { getAllReviews, deleteReview, createReview, updateReview } from "../../services/reviews"
 import Reviews from "./Reviews"
+import CreateReview from "../CreateReview/CreateReview"
 
 export default function ReviewsContainer(props) {
     const [reviews, setReviews] = useState([])
@@ -39,7 +40,9 @@ export default function ReviewsContainer(props) {
             <Route path="/" element={<Reviews 
             reviews={reviews}
             currentUser={props.currentUser}
+            handleDelete={handleDelete}
             />} />
+            <Route path='/createReview' element={<CreateReview />} />
         </Routes>
     </div>
   )

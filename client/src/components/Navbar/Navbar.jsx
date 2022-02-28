@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './navbar.css'
 
 export default function Navbar(props) {
   return (
@@ -7,7 +8,10 @@ export default function Navbar(props) {
         <Link to='/'>Home</Link>
         {props.currentUser ? 
         <>
-            <h3> Welcome, {props.currentUser.username}</h3>
+            {props.currentUser.image !== null ? <> <img src={props.currentUser.image} alt={props.currentUser.username} className='NavImg'/> </>
+            : <> <img src='https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png' alt={props.currentUser.username} className='NavImg'/> </>
+        }
+            
             <button onClick={props.logout}>Log Out</button>
         </>
         :

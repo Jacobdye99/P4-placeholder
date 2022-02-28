@@ -2,10 +2,10 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import { verifyUser } from './services/users';
 import { Routes, Route } from 'react-router-dom'
-import ReviewsContainer from './components/ReviewsContainer';
-import Login from './components/Login';
-import Navbar from './components/Navbar';
-import Register from './components/Register';
+import ReviewsContainer from './components/Reviews/ReviewsContainer';
+import Login from './components/Login/Login';
+import Navbar from './components/Navbar/Navbar';
+import Register from './components/Register/Register';
 
 function App() {
 
