@@ -24,6 +24,7 @@ export default function MovieDetails(props) {
         {props.currentUser ? 
         <>
         <button>Create Review</button>
+        <button>Add to Favorites</button>
         </>
         :
         <>

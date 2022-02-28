@@ -8,6 +8,7 @@ import Navbar from './components/Navbar/Navbar';
 import Register from './components/Register/Register';
 import Movies from './components/Movies/Movies';
 import MovieDetails from './components/MovieDetails/MovieDetails';
+import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
     <Route path='/user/:id' element={<h1>Movies</h1>} />
     <Route path='/login' element={<Login setCurrentUser={setCurrentUser} />} />
     </Routes>  
+    <Footer />
     </div>
   );
 }
