@@ -6,6 +6,8 @@ import ReviewsContainer from './components/Reviews/ReviewsContainer';
 import Login from './components/Login/Login';
 import Navbar from './components/Navbar/Navbar';
 import Register from './components/Register/Register';
+import Movies from './components/Movies/Movies';
+import MovieDetails from './components/MovieDetails/MovieDetails';
 
 function App() {
 
@@ -28,9 +30,9 @@ function App() {
     <div className="App">
     <Navbar currentUser={currentUser} logout={logout}/>
     <Routes>
-    <Route path='/' element={<h1>Hello</h1>} />
+    <Route path='/' element={<Movies />} />
     <Route path='/reviews/*' element={<ReviewsContainer currentUser={currentUser} />} />
-    {/* <Route path='/movies/:id' element={<h1>MovieDetails</h1>} /> */}
+    <Route path='/movies/:id' element={<MovieDetails currentUser={currentUser} />} />
     <Route path='/register' element={<Register setCurrentUser={setCurrentUser} />} />
     <Route path='/user/:id' element={<h1>Movies</h1>} />
     <Route path='/login' element={<Login setCurrentUser={setCurrentUser} />} />
