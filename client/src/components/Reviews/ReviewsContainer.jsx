@@ -42,7 +42,7 @@ export default function ReviewsContainer(props) {
             currentUser={props.currentUser}
             handleDelete={handleDelete}
             />} />
-            <Route path='/createReview' element={<CreateReview />} />
+            {/* <Route path='/createReview' element={<CreateReview handleCreate={handleCreate}/>} /> */}
         </Routes>
     </div>
   )

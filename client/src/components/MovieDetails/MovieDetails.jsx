@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams, Routes, Route } from 'react-router-dom'
 import { getOneMovie } from '../../services/movies'
+import CreateReview from '../CreateReview/CreateReview'
+import Popup from '../Popup.jsx/Popup'
 
 export default function MovieDetails(props) {
     const [movie, setMovie] = useState([])
     const {id} = useParams()
+    const [trigger, setTrigger] = useState(false)
 
     useEffect(() => {
         const fetchMovieDetails = async () => {
@@ -23,14 +26,18 @@ export default function MovieDetails(props) {
 
         {props.currentUser ? 
         <>
-        <button>Create Review</button>
-        <button>Add to Favorites</button>
+        <button onClick={(e) => setTrigger(!trigger)}>Create Review</button>
+        <button >Add to Favorites</button>
+        <Popup trigger={trigger}>
+            <CreateReview movieId={id} />
+        </Popup>
         </>
         :
         <>
-        null
+        Sign in to leave a review!
         </>
         }
+        
     </div>
   )
 }
