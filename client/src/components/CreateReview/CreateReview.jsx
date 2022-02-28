@@ -11,13 +11,15 @@ export default function CreateReview(props) {
     stars: 0,
     movie_id: props.movieId
   }
-  const [toggle, setToggle] = useState(false)
+  // const [toggle, setToggle] = useState(false)
   const [data, setData] = useState(review)
   const navigate = useNavigate()
-  const handleCreate = async (data) => {
+  const handleCreate = async (e, data) => {
+    e.preventDefault()
     await createReview(data)
-    setToggle(prevToggle => !prevToggle)
-    // navigate('/reviews')
+    navigate('/reviews')
+    
+    // setToggle(prevToggle => !prevToggle)
 }
 const handleTextInput = (e) => {
   e.preventDefault()
@@ -26,15 +28,15 @@ const handleTextInput = (e) => {
       ...prevData,
       [id]: value
   }))
-  console.log(data)
+  // console.log(data)
 }
   // console.log(props.reviews)
 
   return (
-    <form onSubmit={() => handleCreate(data)}>
+    <form onSubmit={(e) => handleCreate(e, data)}>
       <textarea type='text' id='review' onChange={handleTextInput}  />
       <StarRating handleTextInput={handleTextInput} stars={data.stars}/>
-      <button>Post</button>
+      <button type='submit'>Post</button>
     </form>
   )
 }
