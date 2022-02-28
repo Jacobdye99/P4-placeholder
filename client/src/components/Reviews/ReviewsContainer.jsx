@@ -3,6 +3,7 @@ import {Routes, Route, useNavigate} from "react-router-dom"
 import { getAllReviews, deleteReview, createReview, updateReview } from "../../services/reviews"
 import Reviews from "./Reviews"
 import CreateReview from "../CreateReview/CreateReview"
+import EditReview from "../EditReview/EditReview"
 
 export default function ReviewsContainer(props) {
     const [reviews, setReviews] = useState([])
@@ -42,7 +43,10 @@ export default function ReviewsContainer(props) {
             currentUser={props.currentUser}
             handleDelete={handleDelete}
             />} />
-            {/* <Route path='/createReview' element={<CreateReview handleCreate={handleCreate}/>} /> */}
+            <Route path='/:id/edit' element={<EditReview
+            handleEdit={handleEdit}
+            reviews={reviews}
+            />} />
         </Routes>
     </div>
   )

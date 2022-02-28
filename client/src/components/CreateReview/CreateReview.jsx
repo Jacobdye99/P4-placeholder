@@ -11,6 +11,7 @@ export default function CreateReview(props) {
     stars: 0,
     movie_id: props.movieId
   }
+
   // const [toggle, setToggle] = useState(false)
   const [data, setData] = useState(review)
   const navigate = useNavigate()

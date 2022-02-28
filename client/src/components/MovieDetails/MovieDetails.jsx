@@ -29,7 +29,7 @@ export default function MovieDetails(props) {
         <button onClick={(e) => setTrigger(!trigger)}>Create Review</button>
         <button >Add to Favorites</button>
         <Popup trigger={trigger}>
-            <CreateReview movieId={id} />
+            <CreateReview movieId={movie.imdbID} />
         </Popup>
         </>
         :
