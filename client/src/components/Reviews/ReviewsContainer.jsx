@@ -25,11 +25,11 @@ export default function ReviewsContainer(props) {
         navigate('/reviews')
     }
 
-    const handleCreate = async (data) => {
-        await createReview(data)
-        setToggle(prevToggle => !prevToggle)
-        navigate('/reviews')
-    }
+    // const handleCreate = async (data) => {
+    //     await createReview(data)
+    //     setToggle(prevToggle => !prevToggle)
+    //     navigate('/reviews')
+    // }
 
     const handleEdit = async (id, data) => {
         await updateReview(id, data)

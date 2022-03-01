@@ -5,19 +5,19 @@ class CommentsController < ApplicationController
   # GET /comments
   def index
     @review = Review.find(params[:review_id])
-    @comments = @review.comments
+    @comments = @review.comments 
 
-    render json: @comments
+    render json: @comments, include: :user
   end
 
   def get_all_comments
     @reviews = Comment.all
-    render json: @reviews
+    render json: @reviews ,include: :user
   end
 
   # GET /comments/1
   def show
-    render json: @comment
+    render json: @comment, include: :user
   end
 
   # POST /comments
