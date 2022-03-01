@@ -1,7 +1,7 @@
 import axios from "axios";
 const KEY = process.env.KEY
 
-const rubyUrl = 'http://localhost:3000'
+const rubyUrl = 'https://reviewiop4.herokuapp.com/'
 
 const omdbUrl = `http://www.omdbapi.com`
 
