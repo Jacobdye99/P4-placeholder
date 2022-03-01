@@ -17,7 +17,9 @@ export default function Comments(props) {
         {comments.map((comment) => {
             return(
                 <div key={comment.id}>
-                    <p><img src={comment.user?.image} alt={comment.user?.username}/><h4>{comment.user?.username}:</h4>{comment.content}</p>
+                    <img src={comment.user?.image} alt={comment.user?.username}/>
+                    <h4>{comment.user?.username}:</h4>
+                    <p>{comment.content}</p>
                 </div>    
             )
         })}
