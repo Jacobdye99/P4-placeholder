@@ -15,6 +15,12 @@ export default function ReviewDetails(props) {
     }, [id])
     console.log(review)
   return (
-    <div>ReviewDetails</div>
+    <div>
+        <div>
+            <h3>{review.user.username}</h3>
+            <p>{review.review}</p>
+            <img src={review.poster} alt={review.movie_name} />
+        </div>
+    </div>
   )
 }

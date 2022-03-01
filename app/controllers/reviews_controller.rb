@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/1
   def show
-    render json: @review
+    render json: @review, include: :user
   end
 
   def get_all_reviews
