@@ -4,6 +4,7 @@ import { getAllReviews, deleteReview, createReview, updateReview } from "../../s
 import Reviews from "./Reviews"
 import CreateReview from "../CreateReview/CreateReview"
 import EditReview from "../EditReview/EditReview"
+import ReviewDetails from "../ReviewDetails/ReviewDetails"
 
 export default function ReviewsContainer(props) {
     const [reviews, setReviews] = useState([])
@@ -46,6 +47,12 @@ export default function ReviewsContainer(props) {
             <Route path='/:id/edit' element={<EditReview
             handleEdit={handleEdit}
             reviews={reviews}
+            />} />
+            <Route path='/:id' element={<ReviewDetails
+            reviews={reviews}
+            handleDelete={handleDelete}
+            handleEdit={handleEdit}
+            currentUser={props.currentUser}
             />} />
         </Routes>
     </div>

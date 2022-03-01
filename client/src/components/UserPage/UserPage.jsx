@@ -32,6 +32,7 @@ export default function UserPage(props) {
         {reviews.map((review) => {
             return (
                 <div key={review.id}>
+                    <img src={review.poster} alt={review.movie_name} />
                     <p>{review.review}</p>
                     <StarRating2 stars={review.stars} />
                 </div>
