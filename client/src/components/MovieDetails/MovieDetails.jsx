@@ -4,17 +4,20 @@ import { getOneMovie } from '../../services/movies'
 import CreateReview from '../CreateReview/CreateReview'
 import Popup from '../Popup.jsx/Popup'
 import { getAllReviews } from '../../services/reviews'
+import StarRating2 from '../StarRating/StarRating2'
 
 export default function MovieDetails(props) {
     const [movie, setMovie] = useState([])
     const {id} = useParams()
     const [trigger, setTrigger] = useState(false)
     const [reviews, setReviews] = useState([])
+    let sum = 0
+    let totalReviews = []
 
     useEffect(() => {
         const fetchMovieDetails = async () => {
             const res = await getOneMovie(id)
-            console.log(res)
+            // console.log(res)
             setMovie(res)
 
         }
@@ -26,14 +29,36 @@ export default function MovieDetails(props) {
         }
         fetchReviews()
     }, [id])
+    
+    const addAllStars = () => {
+        // eslint-disable-next-line array-callback-return
+        reviews?.map((review) => {
+            if (review?.movie_id === movie?.imdbID) {
+            totalReviews.push(review?.stars)
+            
+            }
+        })
+        totalReviews.map((review) => {
+            sum += review/totalReviews.length
+        })
+    }
+    addAllStars()
 
-
-    console.log(reviews.length)
+    console.log(Math.round(sum))
+    console.log(totalReviews)
+    // console.log(reviews.length)
+    // console.log(reviews?.length)
     // console.log(movie)
   return (
     <div>
         <img src={movie.Poster} alt={movie.Title} />
         <h2>{movie.Title} ({movie.Year})</h2>
+        <p>
+            {movie.Plot}
+        </p>
+        <div>
+        <StarRating2 stars={Math.round(sum)} />
+        </div>
 
         {props.currentUser ? 
         <>
