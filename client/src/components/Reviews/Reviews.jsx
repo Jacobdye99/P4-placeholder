@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Popup from '../Popup.jsx/Popup'
 import Comments from '../Comments/Comments'
 import CreateComment from '../CreateComment/CreateComment'
+import StarRating2 from '../StarRating/StarRating2'
 export default function Reviews(props) {
   const navigate = useNavigate()
   const [trigger, setTrigger] = useState(false)
@@ -20,12 +21,14 @@ export default function Reviews(props) {
             <Link to={`/reviews/${review.id}`}>
                 <h4>{review.review}</h4>
             </Link>
+                <div><img src={review.poster} alt={review.movie_name} />
+                <StarRating2 stars={review.stars} />
+                </div>
+                
                 <button onClick={(e) => setTrigger(!trigger)}>Show Comments</button>
             <Popup trigger={trigger}>
                 <Comments id={review.id} />
             </Popup>
-                
-                <img src={review.poster} alt={review.movie_name} />
 
             {
               props.currentUser?.id === review.user_id ?

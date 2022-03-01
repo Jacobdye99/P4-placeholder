@@ -3,11 +3,13 @@ import { useParams } from 'react-router-dom'
 import { getOneMovie } from '../../services/movies'
 import CreateReview from '../CreateReview/CreateReview'
 import Popup from '../Popup.jsx/Popup'
+import { getAllReviews } from '../../services/reviews'
 
 export default function MovieDetails(props) {
     const [movie, setMovie] = useState([])
     const {id} = useParams()
     const [trigger, setTrigger] = useState(false)
+    const [reviews, setReviews] = useState([])
 
     useEffect(() => {
         const fetchMovieDetails = async () => {
@@ -17,7 +19,16 @@ export default function MovieDetails(props) {
 
         }
         fetchMovieDetails()
+        const fetchReviews = async () => {
+            const res = await getAllReviews()
+            // console.log(res)
+            setReviews(res)
+        }
+        fetchReviews()
     }, [id])
+
+
+    console.log(reviews.length)
     // console.log(movie)
   return (
     <div>

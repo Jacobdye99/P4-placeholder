@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { getOneReview } from "../../services/reviews"
+import Popup from "../Popup.jsx/Popup"
+import Comments from "../Comments/Comments"
+import CreateComment from '../CreateComment/CreateComment'
+import StarRating2 from "../StarRating/StarRating2"
 
 export default function ReviewDetails(props) {
     const [review, setReview] = useState([])
     const {id} = useParams()
     const navigate = useNavigate()
+    const [trigger, setTrigger] = useState(false)
+    const [trigger2, setTrigger2] = useState(false)
 
     useEffect(() => {
         const getReview = async (id) => {
@@ -30,7 +36,12 @@ export default function ReviewDetails(props) {
             <h3>{review.user?.username}</h3>
             <p>{review.review}</p>
             <img src={review.poster} alt={review.movie_name} />
+            <StarRating2 stars={review.stars} />
         </div>
+        <button onClick={(e) => setTrigger(!trigger)}>Show Comments</button>
+            <Popup trigger={trigger}>
+                <Comments id={review.id} />
+            </Popup>
         {
               props.currentUser?.id === review.user_id ?
               <>
@@ -40,6 +51,17 @@ export default function ReviewDetails(props) {
               <button onClick={() => navigate(`/reviews/${review.id}/edit`)}>
                 Edit
               </button>
+              </>
+              :
+              null
+            }
+            {
+              props.currentUser ?
+              <>
+              <button onClick={(e) => setTrigger2(!trigger2)}>Create Comment</button>
+            <Popup trigger={trigger2}>
+                <CreateComment id={review.id} setTrigger={setTrigger} setTrigger2={setTrigger2}/>
+            </Popup>
               </>
               :
               null
