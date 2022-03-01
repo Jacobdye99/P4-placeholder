@@ -14,8 +14,6 @@ export default function CreateReview(props) {
     movie_name: props.movieName
   }
   
-
-  // const [toggle, setToggle] = useState(false)
   const [data, setData] = useState(review)
   const navigate = useNavigate()
   const handleCreate = async (e, data) => {

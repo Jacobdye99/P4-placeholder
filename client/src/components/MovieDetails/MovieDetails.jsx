@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useParams, Routes, Route } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { getOneMovie } from '../../services/movies'
 import CreateReview from '../CreateReview/CreateReview'
 import Popup from '../Popup.jsx/Popup'
