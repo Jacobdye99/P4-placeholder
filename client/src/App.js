@@ -9,6 +9,7 @@ import Register from './components/Register/Register';
 import Movies from './components/Movies/Movies';
 import MovieDetails from './components/MovieDetails/MovieDetails';
 import Footer from './components/Footer/Footer';
+import UserPage from './components/UserPage/UserPage';
 
 function App() {
 
@@ -35,7 +36,7 @@ function App() {
     <Route path='/reviews/*' element={<ReviewsContainer currentUser={currentUser} />} />
     <Route path='/movies/:id' element={<MovieDetails currentUser={currentUser} />} />
     <Route path='/register' element={<Register setCurrentUser={setCurrentUser} />} />
-    <Route path='/user/:id' element={<h1>Movies</h1>} />
+    <Route path='/user/:id' element={<UserPage currentUser={currentUser} />} />
     <Route path='/login' element={<Login setCurrentUser={setCurrentUser} />} />
     </Routes>  
     <Footer />

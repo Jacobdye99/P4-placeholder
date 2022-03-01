@@ -8,8 +8,9 @@ export default function Navbar(props) {
         <Link to='/'>Home</Link>
         {props.currentUser ? 
         <>
-            {props.currentUser.image !== null ? <> <img src={props.currentUser.image} alt={props.currentUser.username} className='NavImg'/> </>
-            : <> <img src='https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png' alt={props.currentUser.username} className='NavImg'/> </>
+
+            {props.currentUser.image !== null ? <Link to={`/user/${props.currentUser.id}`}><img src={props.currentUser.image} alt={props.currentUser.username} className='NavImg'/></Link>
+            : <Link to={`/user/${props.currentUser.id}`}> <img src='https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png' alt={props.currentUser.username} className='NavImg'/> </Link>
         }
             
             <button onClick={props.logout}>Log Out</button>

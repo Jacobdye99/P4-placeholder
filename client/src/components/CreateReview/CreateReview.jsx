@@ -9,8 +9,11 @@ export default function CreateReview(props) {
     review: "",
     likes: 0,
     stars: 0,
-    movie_id: props.movieId
+    movie_id: props.movieId,
+    poster: props.poster,
+    movie_name: props.movieName
   }
+  
 
   // const [toggle, setToggle] = useState(false)
   const [data, setData] = useState(review)
@@ -29,7 +32,7 @@ const handleTextInput = (e) => {
       ...prevData,
       [id]: value
   }))
-  // console.log(data)
+  console.log(data)
 }
   // console.log(props.reviews)
 
