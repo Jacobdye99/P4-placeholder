@@ -1,5 +1,4 @@
 import axios from "axios";
-const KEY = process.env.KEY
 
 const rubyUrl = 'https://reviewiop4.herokuapp.com/'
 

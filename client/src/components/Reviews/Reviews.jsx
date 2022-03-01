@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-// import { deleteReview } from '../../services/reviews'
-import { useNavigate } from 'react-router-dom'
-import { getOneMovie } from '../../services/movies'
 
+import { Link, useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import Popup from '../Popup.jsx/Popup'
+import Comments from '../Comments/Comments'
 export default function Reviews(props) {
-  const [movie, setMovie] = useState([])
   const navigate = useNavigate()
+  const [trigger, setTrigger] = useState(false)
   
   return (
     <div>
         {props.reviews.map(review => {
-          // {getMovies(review.movie_id)}
             return (
                 <div key={review.id}>
             <Link to={`/user/${review.user.id}`}>
@@ -20,6 +18,10 @@ export default function Reviews(props) {
             <Link to={`/reviews/${review.id}`}>
                 <h4>{review.review}</h4>
             </Link>
+                <button onClick={(e) => setTrigger(!trigger)}>Show Comments</button>
+            <Popup trigger={trigger}>
+                <Comments id={review.id} />
+            </Popup>
                 
                 <img src={review.poster} alt={review.movie_name} />
 

@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react"
 import {Routes, Route, useNavigate} from "react-router-dom"
-import { getAllReviews, deleteReview, createReview, updateReview } from "../../services/reviews"
+import { getAllReviews, deleteReview, updateReview } from "../../services/reviews"
 import Reviews from "./Reviews"
-import CreateReview from "../CreateReview/CreateReview"
 import EditReview from "../EditReview/EditReview"
 import ReviewDetails from "../ReviewDetails/ReviewDetails"
 
@@ -24,12 +23,6 @@ export default function ReviewsContainer(props) {
         setToggle(prevToggle => !prevToggle)
         navigate('/reviews')
     }
-
-    // const handleCreate = async (data) => {
-    //     await createReview(data)
-    //     setToggle(prevToggle => !prevToggle)
-    //     navigate('/reviews')
-    // }
 
     const handleEdit = async (id, data) => {
         await updateReview(id, data)

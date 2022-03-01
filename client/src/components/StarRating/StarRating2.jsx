@@ -1,9 +1,8 @@
 import { FaStar } from 'react-icons/fa'
 import './starRating.css'
-// import { useState } from 'react';
+
 
 export default function StarRating2(props) {
-    // const [hover, setHover] = useState(null)
   return (
     <div>
         {[...Array(5)].map((star, i) => {
