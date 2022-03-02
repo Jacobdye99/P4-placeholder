@@ -5,6 +5,7 @@ import CreateReview from '../CreateReview/CreateReview'
 import Popup from '../Popup.jsx/Popup'
 import { getAllReviews } from '../../services/reviews'
 import StarRating2 from '../StarRating/StarRating2'
+import './MovieDetails.css'
 
 export default function MovieDetails(props) {
     const [movie, setMovie] = useState([])
@@ -51,10 +52,12 @@ export default function MovieDetails(props) {
     // console.log(reviews?.length)
     // console.log(movie)
   return (
-    <div>
-        <img src={movie.Poster} alt={movie.Title} />
+    <div align='center' className='movieDeetz'>
+        <img src={movie.Poster} alt={movie.Title} id='movie_poster'/>
+        <br />
         <h2>{movie.Title} ({movie.Year})</h2>
-        <p>
+        <br />
+        <p className='plot'>
             {movie.Plot}
         </p>
         <div>
@@ -64,7 +67,8 @@ export default function MovieDetails(props) {
         {props.currentUser ? 
         <>
         <button onClick={(e) => setTrigger(!trigger)}>Create Review</button>
-        <button >Add to Favorites</button>
+        <br />
+        {/* <button >Add to Favorites</button> */}
         <Popup trigger={trigger}>
             <CreateReview movieId={movie.imdbID} movieName={movie.Title} poster={movie.Poster} />
         </Popup>

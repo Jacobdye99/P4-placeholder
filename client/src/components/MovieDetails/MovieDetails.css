@@ -1,0 +1,21 @@
+#movie_poster {
+    margin: 10px;
+}
+
+.movieDeetz {
+    display: inline-flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* overflow: auto; */
+}
+
+#movie_poster {
+    /* order: 1; */
+    
+}
+
+.plot {
+    order: 0
+}
