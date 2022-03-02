@@ -13,6 +13,7 @@ export default function Register(props) {
 
 
   return (
+    <div align="center">
     <form onSubmit={async (e) => {
         e.preventDefault()
         const user = {
@@ -25,12 +26,16 @@ export default function Register(props) {
         props.setCurrentUser(res)
 
         navigate('/')
-    }}>
-        <input type='text' onChange={(e) => setUsername(e.target.value) } value={username} placeholder="Username" />
-        <input type='text' onChange={(e) => setEmail(e.target.value) } value={email} placeholder='Email' />
-        <input type='password' onChange={(e) => setPassword(e.target.value) } value={password} placeholder='Password' />
-        <input type='text' onChange={(e) => setImage(e.target.value) } value={image} placeholder="Image Url" />
-        <button>Register User</button>
+    }} className="Form">
+      <fieldset id="border">
+      <legend id="legend">Register</legend>
+        <input type='text' onChange={(e) => setUsername(e.target.value) } value={username} placeholder="Username" className="Inputs" />
+        <input type='text' onChange={(e) => setEmail(e.target.value) } value={email} placeholder='Email' className="Inputs" />
+        <input type='password' onChange={(e) => setPassword(e.target.value) } value={password} placeholder='Password' className="Inputs" />
+        <input type='text' onChange={(e) => setImage(e.target.value) } value={image} placeholder="Image Url" className="Inputs" />
+        <button className="button">Register User</button>
+        </fieldset>
     </form>
+    </div>
   )
 }

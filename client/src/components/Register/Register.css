@@ -1,0 +1,35 @@
+#legend {
+    text-align: left;
+    color: #60435F;
+    
+}
+
+#border {
+    border-color: #60435F;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.Inputs {
+    display: block;
+    margin: 20px; 
+    padding: 10px 5px 10px 5px;
+    justify-content: center;
+    background-color: #FDF7FA;
+}
+
+.Form {
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    color: white;
+}
+
+.button {
+    background-color: #60435F;
+    color: #FDF7FA;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

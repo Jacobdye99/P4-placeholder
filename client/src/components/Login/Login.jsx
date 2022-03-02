@@ -24,9 +24,9 @@ export default function Login(props) {
     }} className="Form">
       <fieldset id="border">
         <legend id="legend">Login</legend>
-        <input type='text' onChange={(e) => setUsername(e.target.value) } value={username} className="Inputs"/>
-        <input type='password' onChange={(e) => setPassword(e.target.value) } value={password} className="Inputs" />
-        <button>Login</button>
+        <input type='text' onChange={(e) => setUsername(e.target.value) } value={username} className="Inputs" placeholder="Username"/>
+        <input type='password' onChange={(e) => setPassword(e.target.value) } value={password} className="Inputs" placeholder="Password"/>
+        <button className="button">Login</button>
         </fieldset>
     </form>
     </div>
