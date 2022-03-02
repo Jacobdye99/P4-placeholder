@@ -1,11 +1,32 @@
 .Navbar {
-    background-color: grey;
+    background-color: #60435F;
     /* border-style: solid; */
     /* border-width: 10px; */
     padding: 15px;
     display: inline-flexbox;
     text-align: right;
+    color: #FDF7FA;
 
+}
+
+.logoImg {
+    width: 150px;
+    display: block;
+    text-align: center;
+    /* border-style: solid; */
+    margin-left: 20px;
+
+}
+
+#logoText {
+    width: 100px;
+    display: block;
+    text-align: center;
+    /* border-style: solid; */
+    margin-bottom: -60px;
+    margin-top: -10px;
+    margin-left: 25px;
+    
 }
 
 
@@ -13,18 +34,20 @@
     width: 50px;
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 10px;
+    margin-top: -10px;
     border-radius: 40px;
     display: inline-flexbox;
 }
 .navButton {
-    background-color: grey;
+    background-color: #60435F;
     border-style: none;
     display: inline-flexbox;
     height: 20px;
     margin-left: 30px;
-    /* margin-right: 20px; */
+    margin-right: -20px;
     margin-top: -30px;
+    padding: 10px;
+    color: #FDF7FA
 }
 #navLink {
     display: inline-block;
@@ -34,6 +57,12 @@
     color: black;
     /* border-style: solid; */
     /* border-color: red; */
-    background-color: ;
+    /* background-color: ; */
     margin-right: 50px;
+    color: #FDF7FA
 }
+.logoLink {
+ text-decoration: none;
+ color: #FDF7FA
+}
+

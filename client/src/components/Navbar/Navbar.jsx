@@ -6,6 +6,12 @@ export default function Navbar(props) {
   return (
     <div>
     <div className='Navbar'>
+      <div className='logoImg'>
+        <Link to={'/'} className="logoLink">
+      <img src='https://github.com/Jacobdye99/Review.io/blob/main/Assets/clipart2676942.png?raw=true' alt='Review.io logo' className='logoImg'/>
+      <h1 id='logoText'>Review.io</h1>
+        </Link>
+      </div>
         <Link to='/' id='navLink'>Movies</Link>
         <Link to='/reviews' id='navLink'>Review Feed</Link>
         {props.currentUser ? 
