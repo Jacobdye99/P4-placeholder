@@ -52,18 +52,23 @@ export default function MovieDetails(props) {
     // console.log(reviews?.length)
     // console.log(movie)
   return (
+    <div align="center">
+        <h2>{movie.Title} ({movie.Year})</h2>
     <div align='center' className='movieDeetz'>
         <img src={movie.Poster} alt={movie.Title} id='movie_poster'/>
-        <br />
-        <h2>{movie.Title} ({movie.Year})</h2>
         <br />
         <p className='plot'>
             {movie.Plot}
         </p>
-        <div>
+        {/* <h2>{movie.Title} ({movie.Year})</h2> */}
+        <br />
+        
+        <div stars>
+        <div align="center" className='stars'>
         <StarRating2 stars={Math.round(sum)} />
         </div>
 
+        <div align="center" className='reviews'>
         {props.currentUser ? 
         <>
         <button onClick={(e) => setTrigger(!trigger)}>Create Review</button>
@@ -78,7 +83,10 @@ export default function MovieDetails(props) {
         Sign in to leave a review!
         </>
         }
+        </div>
+        </div>
         
+    </div>
     </div>
   )
 }

@@ -7,15 +7,32 @@
     flex-wrap: wrap;
     text-align: center;
     justify-content: center;
+    align-content: space-between;
     align-items: center;
+    gap: 20px;
     /* overflow: auto; */
 }
 
-#movie_poster {
+/* #movie_poster {
     /* order: 1; */
+    /* margin-left: 20%; */
     
-}
+/* } */
 
 .plot {
-    order: 0
+    order: 4;
+    /* border-style: solid; */
+    padding: 30px;
+    /* margin-right: 500px; */
+    width: 30%;
+}
+
+.reviews {
+    /* margin-left: 700px; */
+    /* border-style: solid; */
+}
+
+.stars {
+    /* margin-left: 700px; */
+    /* border-style: solid; */
 }
