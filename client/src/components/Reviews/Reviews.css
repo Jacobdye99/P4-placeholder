@@ -1,0 +1,57 @@
+.fullReview {
+    width: 100%;
+    margin: 0 auto;
+    display: flexbox;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* overflow: scroll; */
+}
+
+.eachReview {
+    background-color: white;
+        max-width: 600px;
+        max-height: 500px;
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 2px;
+        border: .25px lightgrey solid;
+}
+
+.review {
+    padding: 5px;
+    font-size: 14px; 
+    text-decoration: none;
+    background-color: white;
+        max-width: 600px;
+        max-height: 500px;
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 2px;
+        border: .25px lightgrey solid;
+}
+
+.buttons {
+    background-color: #A8DCD9;
+}
+
+.posters {
+    width: 100px;
+    text-align: left;
+    display: flex;
+    /* margin-right: 500px; */
+}
+
+.user {
+    display: flex;
+}
+
+.reviewLinks {
+    text-decoration: none;
+    color: black;
+
+}
+
+.poster_stars {
+    display: flexbox;
+    flex-wrap: wrap;
+}
