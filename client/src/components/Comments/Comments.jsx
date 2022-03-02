@@ -10,7 +10,7 @@ export default function Comments(props) {
         const getComments = async (id) => {
             const res = await getReviewComments(id)
             setComments(res)
-            console.log(res)
+            // console.log(res)
         }
         getComments(props.id)
     }, [props.id])

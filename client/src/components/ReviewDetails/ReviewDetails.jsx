@@ -20,7 +20,7 @@ export default function ReviewDetails(props) {
         }
         getReview(id)
     }, [id])
-    console.log(review)
+    // console.log(review)
 
     if (review.user?.username === undefined) {
         return (

@@ -30,7 +30,7 @@ const handleTextInput = (e) => {
       ...prevData,
       [id]: value
   }))
-  console.log(data)
+  // console.log(data)
 }
   // console.log(props.reviews)
 

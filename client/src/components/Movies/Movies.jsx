@@ -15,7 +15,7 @@ export default function Movies() {
             e.preventDefault()
             const res = await getMovies(search)
             setMovies(res.Search)
-            console.log(res.Search)
+            // console.log(res.Search)
         }}>
         <input type='text' onChange={(e) => setSearch(e.target.value)} id="movie_input"/>
         <button id='movie_button'>Search Movies</button>

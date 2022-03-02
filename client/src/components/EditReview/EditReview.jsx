@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import StarRating from '../StarRating/StarRating'
 
 
 export default function EditReview(props) {
 
     // const [review, setReview] = useState('')
+    // eslint-disable-next-line no-unused-vars
     const [stars, setStars] = useState(0)
     // const [likes, setLikes] = useState(0)
     const [movieId, setMovieId] = useState("")
@@ -18,7 +19,6 @@ export default function EditReview(props) {
       }
     const [data, setData] = useState(review)
     const {id} = useParams()
-    const navigate = useNavigate()
     
 
     useEffect(() => {
@@ -41,23 +41,15 @@ export default function EditReview(props) {
             ...prevData,
             [id]: value
         }))
-        console.log(data)
+        // console.log(data)
       }
-      console.log(data.movie_id)
+      // console.log(data.movie_id)
 
   return (
     <div align="center">
     <form onSubmit={(e) => {
         e.preventDefault()
-        // const newReview = {
-        //     review,
-        //     stars,
-        //     likes,
-        //     movieId
-        // }
-        // navigate('/reviews')
         props.handleEdit(id, data)
-        console.log(stars)
     }} className="Form">
       <fieldset id="border">
       <legend id="legend">Edit your review</legend>

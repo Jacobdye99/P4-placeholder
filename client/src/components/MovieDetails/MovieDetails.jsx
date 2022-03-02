@@ -43,11 +43,12 @@ export default function MovieDetails(props) {
         totalReviews.map((review) => {
             sum += review/totalReviews.length
         })
+        return
     }
     addAllStars()
 
-    console.log(Math.round(sum))
-    console.log(totalReviews)
+    // console.log(Math.round(sum))
+    // console.log(totalReviews)
     // console.log(reviews.length)
     // console.log(reviews?.length)
     // console.log(movie)
@@ -63,7 +64,7 @@ export default function MovieDetails(props) {
         {/* <h2>{movie.Title} ({movie.Year})</h2> */}
         <br />
         
-        <div stars>
+        <div className="stars">
         <div align="center" className='stars'>
         <StarRating2 stars={Math.round(sum)} />
         </div>

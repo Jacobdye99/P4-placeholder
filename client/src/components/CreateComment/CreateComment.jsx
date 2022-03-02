@@ -21,7 +21,7 @@ export default function CreateComment(props) {
             ...prevData,
             [id]: value
         }))
-        console.log(data)
+        // console.log(data)
       }
   return (
     <form onSubmit={(e) => handleCreate(e, props.id, data)} className="Form">
