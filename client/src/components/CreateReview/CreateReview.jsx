@@ -36,9 +36,9 @@ const handleTextInput = (e) => {
 
   return (
     <form onSubmit={(e) => handleCreate(e, data)}>
-      <textarea type='text' id='review' onChange={handleTextInput}  />
+      <textarea type='text' id='review' onChange={handleTextInput} className="Inputs"  />
       <StarRating handleTextInput={handleTextInput} stars={data.stars}/>
-      <button type='submit'>Post</button>
+      <button type='submit' className='buttons'>Post</button>
     </form>
   )
 }

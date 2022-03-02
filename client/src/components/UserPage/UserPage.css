@@ -1,0 +1,9 @@
+.UserForm {
+    border-style: solid;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.UserImg {
+    width: 200px;
+}

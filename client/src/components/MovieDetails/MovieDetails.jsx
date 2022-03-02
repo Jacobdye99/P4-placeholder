@@ -71,7 +71,7 @@ export default function MovieDetails(props) {
         <div align="center" className='reviews'>
         {props.currentUser ? 
         <>
-        <button onClick={(e) => setTrigger(!trigger)}>Create Review</button>
+        <button onClick={(e) => setTrigger(!trigger)} className='buttons'>Create Review</button>
         <br />
         {/* <button >Add to Favorites</button> */}
         <Popup trigger={trigger}>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useNavigate, useParams } from "react-router-dom"
+import { useNavigate, useParams, Link } from "react-router-dom"
 import { getOneReview } from "../../services/reviews"
 import Popup from "../Popup.jsx/Popup"
 import Comments from "../Comments/Comments"
@@ -31,24 +31,37 @@ export default function ReviewDetails(props) {
     }
     else {
   return (
-    <div>
-        <div>
+    <div align="center" className='fullReview'>
+        <div className="eachReview">
+            <div className="user">
+            <Link to={`/user/${review.user.id}`} className='reviewLinks'>
+            {review.user?.image !== "" ? 
+                    <>
+                    <img src={review.user?.image} alt={review.user?.username} className='NavImg'/>
+                    </>
+                    :
+                    <>
+                    <img src='https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png' alt={review.user?.username} className='NavImg'/>
+                    </>
+            }
             <h3>{review.user?.username}</h3>
-            <p>{review.review}</p>
-            <img src={review.poster} alt={review.movie_name} />
+            </Link>
+            </div>
+            <p className='review'>{review.review}</p>
+            <img src={review.poster} alt={review.movie_name} className="posters"/>
             <StarRating2 stars={review.stars} />
         </div>
-        <button onClick={(e) => setTrigger(!trigger)}>Show Comments</button>
+        <button onClick={(e) => setTrigger(!trigger)} className='buttons'>Show Comments</button>
             <Popup trigger={trigger}>
                 <Comments id={review.id} />
             </Popup>
         {
               props.currentUser?.id === review.user_id ?
               <>
-              <button onClick={() => props.handleDelete(review.id)}>
+              <button onClick={() => props.handleDelete(review.id)} className='buttons'>
                 Delete
               </button>
-              <button onClick={() => navigate(`/reviews/${review.id}/edit`)}>
+              <button onClick={() => navigate(`/reviews/${review.id}/edit`)} className='buttons'>
                 Edit
               </button>
               </>
@@ -58,7 +71,7 @@ export default function ReviewDetails(props) {
             {
               props.currentUser ?
               <>
-              <button onClick={(e) => setTrigger2(!trigger2)}>Create Comment</button>
+              <button onClick={(e) => setTrigger2(!trigger2)} className='buttons'>Create Comment</button>
             <Popup trigger={trigger2}>
                 <CreateComment id={review.id} setTrigger={setTrigger} setTrigger2={setTrigger2}/>
             </Popup>

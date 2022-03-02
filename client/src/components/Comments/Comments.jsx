@@ -1,6 +1,7 @@
 import { getReviewComments } from "../../services/comments"
 import { useEffect, useState } from "react"
 import './Comments.css'
+import { Link } from "react-router-dom"
 
 export default function Comments(props) {
     const [comments, setComments] = useState([])
@@ -20,11 +21,11 @@ export default function Comments(props) {
                 <div key={comment.id} className="commentDiv">
                     {comment.user?.image !== "" ? 
                     <>
-                    <img src={comment.user?.image} alt={comment.user?.username} className='NavImg'/>
+                    <Link to={`/user/${comment.user?.id}`}><img src={comment.user?.image} alt={comment.user?.username} className='NavImg'/> </Link>
                     </>
                     :
                     <>
-                    <img src='https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png' alt={comment.user?.username} className='NavImg'/>
+                     <Link to={`/user/${comment.user?.id}`}><img src='https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png' alt={comment.user?.username} className='NavImg'/> </Link>
                     </>
             }
                 <div className="comment">
