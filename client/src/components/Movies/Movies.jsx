@@ -37,7 +37,7 @@ export default function Movies() {
         </>
         :
         <>
-        <h3>No Movies Found</h3>
+        <h3>No Media Found</h3>
         </>
         }
         </div>
