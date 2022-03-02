@@ -16,6 +16,15 @@ export default function Reviews(props) {
             return (
                 <div key={review.id}>
             <Link to={`/user/${review.user.id}`}>
+            {review.user?.image !== "" ? 
+                    <>
+                    <img src={review.user?.image} alt={review.user?.username} className='NavImg'/>
+                    </>
+                    :
+                    <>
+                    <img src='https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png' alt={review.user?.username} className='NavImg'/>
+                    </>
+            }
                 <h3>{review.user.username}</h3>
             </Link>
             <Link to={`/reviews/${review.id}`}>

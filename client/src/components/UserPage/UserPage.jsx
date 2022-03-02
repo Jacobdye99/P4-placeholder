@@ -30,10 +30,18 @@ export default function UserPage(props) {
         }
         getReviews(id)
     }, [id])
-return (
+    return (
     <div>
         <h4>{user.username}</h4>
-        <img src={user.image} alt={user.username} />
+        {user.image !== "" ? 
+                    <>
+                    <img src={user.image} alt={user.username} className='NavImg'/>
+                    </>
+                    :
+                    <>
+                    <img src='https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png' alt={user.username} className='NavImg'/>
+                    </>
+            }
 
         {reviews.map((review) => {
             return (

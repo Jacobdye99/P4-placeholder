@@ -38,6 +38,7 @@ export default function MovieDetails(props) {
             
             }
         })
+        // eslint-disable-next-line array-callback-return
         totalReviews.map((review) => {
             sum += review/totalReviews.length
         })

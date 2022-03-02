@@ -17,7 +17,15 @@ export default function Comments(props) {
         {comments.map((comment) => {
             return(
                 <div key={comment.id}>
-                    <img src={comment.user?.image} alt={comment.user?.username}/>
+                    {comment.user?.image !== "" ? 
+                    <>
+                    <img src={comment.user?.image} alt={comment.user?.username} className='NavImg'/>
+                    </>
+                    :
+                    <>
+                    <img src='https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png' alt={comment.user?.username} className='NavImg'/>
+                    </>
+            }
                     <h4>{comment.user?.username}:</h4>
                     <p>{comment.content}</p>
                 </div>    

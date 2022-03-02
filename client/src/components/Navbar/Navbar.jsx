@@ -5,23 +5,30 @@ import './navbar.css'
 export default function Navbar(props) {
   return (
     <div>
-        <Link to='/'>Home</Link>
+    <div className='Navbar'>
+        <Link to='/' id='navLink'>Movies</Link>
+        <Link to='/reviews' id='navLink'>Review Feed</Link>
         {props.currentUser ? 
         <>
-
-            {props.currentUser.image !== null ? <Link to={`/user/${props.currentUser.id}`}><img src={props.currentUser.image} alt={props.currentUser.username} className='NavImg'/></Link>
-            : <Link to={`/user/${props.currentUser.id}`}> <img src='https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png' alt={props.currentUser.username} className='NavImg'/> </Link>
+            <button onClick={props.logout} className="navButton">Log Out</button>
+            {props.currentUser.image !== "" ? 
+            <Link to={`/user/${props.currentUser.id}`}>
+                <img src={props.currentUser.image} alt={props.currentUser.username} className='NavImg'/>
+            </Link>
+            : 
+            <Link to={`/user/${props.currentUser.id}`}> 
+                <img src='https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png' alt={props.currentUser.username} className='NavImg'/>
+            </Link>
         }
-            
-            <button onClick={props.logout}>Log Out</button>
         </>
         :
         <>
-            <Link to='/login'>Login</Link>
-            <Link to='/register'>Register</Link>
+            <Link to='/login' id='navLink'>Login</Link>
+            <Link to='/register' id='navLink'>Register</Link>
         </>    
     }
-    <Link to='/reviews'>Review Feed</Link>
+    
+    </div>
     </div>
   )
 }
