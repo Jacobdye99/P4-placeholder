@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { loginUser } from "../../services/users"
 import { useNavigate } from "react-router-dom"
+import './Login.css'
 
 export default function Login(props) {
     const [username, setUsername] = useState('')
@@ -9,6 +10,7 @@ export default function Login(props) {
     const navigate = useNavigate()
 
   return (
+    <div align="center" className="loginForm">
     <form onSubmit={async (e) => {
         e.preventDefault()
         const user = {
@@ -19,10 +21,14 @@ export default function Login(props) {
         props.setCurrentUser(res)
 
         navigate('/')
-    }}>
-        <input type='text' onChange={(e) => setUsername(e.target.value) } value={username} />
-        <input type='password' onChange={(e) => setPassword(e.target.value) } value={password} />
+    }} className="Form">
+      <fieldset id="border">
+        <legend id="legend">Login</legend>
+        <input type='text' onChange={(e) => setUsername(e.target.value) } value={username} className="Inputs"/>
+        <input type='password' onChange={(e) => setPassword(e.target.value) } value={password} className="Inputs" />
         <button>Login</button>
+        </fieldset>
     </form>
+    </div>
   )
 }
