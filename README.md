@@ -107,22 +107,23 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Create Backend framework   |    H     |     2 hrs      |     TBD     |    TBD    |
-| Create CRUD Actions |    H     |     2 hrs      |     TBD     |     TBD     |
-| Test Routes |    H     |     1.5 hrs      |     TBD     |     TBD     |
-| Implement Auth |    H     |     2 hrs      |     TBD     |     TBD     |
-| test backend and Deploy |    H     |     2.5 hrs      |     TBD     |     TBD     |
-| Create Front End Framework |    H     |     3 hrs      |     TBD     |     TBD     |
-| Implement Api Config for backend and External |    H     |     3 hrs      |     TBD     |     TBD     |
-| Create Components and test |    H     |     3 hrs      |     TBD     |     TBD     |
-| Create Screens |    H     |     3 hrs      |     TBD     |     TBD     |
-| Implement Login & Register |    H     |     3 hrs      |     TBD     |     TBD     |
-| Implement functionality for reviews and Comments |    H     |     4 hrs      |     TBD     |     TBD     |
-| Style and test |    H     |     4 hrs      |     TBD     |     TBD     |
-| Implement a css library |    H     |     3 hrs      |     TBD     |     TBD     |
-| Debug |    H     |     4 hrs      |     TBD     |     TBD     |
-| Post-MVP |    L     |     4 hrs      |     TBD     |     TBD     |
-| TOTAL               |    H     |     44 hrs      |     TBD     |     TBD     |
+| Create Backend framework   |    H     |     2 hrs      |     3 hrs     |    3hrs    |
+| Create CRUD Actions |    H     |     2 hrs      |     2hrs     |     2 hrs     |
+| Test Routes |    H     |     1.5 hrs      |     1 hr     |     1 hr     |
+| Implement Auth |    H     |     2 hrs      |     1 hr     |     1 hr     |
+| test backend and Deploy |    H     |     2.5 hrs      |     1 hr     |     1 hr     |
+| Create Front End Framework |    H     |     3 hrs      |     2hrs     |     2 hrs     |
+| Implement Api Config for backend and External |    H     |     3 hrs      |     2 hrs     |     2 hrs     |
+| Create Components and test |    H     |     3 hrs      |     6 hrs     |     6 hrs     |
+| Create Screens |    H     |     3 hrs      |     4 hrs     |     4 hrs     |
+| Implement Login & Register |    H     |     3 hrs      |     2 hrs     |     2 hrs     |
+| Implement functionality for reviews and Comments |    H     |     4 hrs      |     4 hrs     |     4 hrs     |
+| Style and test |    H     |     4 hrs      |     5 hrs     |     5 hrs     |
+| Implement a css library |    H     |     3 hrs      |     2 hrs     |     2 hrs     |
+| Debug |    H     |     4 hrs      |     2 hrs     |     2 hrs     |
+| Post-MVP |    L     |     4 hrs      |     0 hrs     |     0 hrs     |
+|other stuff|   L     |      -     |    4 hrs      |  4 hrs   |
+| TOTAL               |    H     |     44 hrs      |    41 hrs     |     41 hrs     |
 
 
 <br>
@@ -147,8 +148,24 @@ src
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+```
+const addAllStars = () => {
+        // eslint-disable-next-line array-callback-return
+        reviews?.map((review) => {
+            if (review?.movie_id === movie?.imdbID) {
+            totalReviews.push(review?.stars)
+            
+            }
+        })
+        // eslint-disable-next-line array-callback-return
+        totalReviews.map((review) => {
+            sum += review/totalReviews.length
+        })
+        return
+    }
+    addAllStars()
+```
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+> Most of my issues were with styling afterwards
