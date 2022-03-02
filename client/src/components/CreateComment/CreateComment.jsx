@@ -25,8 +25,8 @@ export default function CreateComment(props) {
       }
   return (
     <form onSubmit={(e) => handleCreate(e, props.id, data)} className="Form">
-        <textarea type="text" id='content' onChange={handleTextInput} />
-        <button type="submit">Post Comment</button>
+        <textarea type="text" id='content' onChange={handleTextInput} className="Inputs" />
+        <button type="submit" className="button">Post Comment</button>
     </form>
   )
 }

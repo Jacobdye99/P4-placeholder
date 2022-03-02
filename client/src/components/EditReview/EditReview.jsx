@@ -61,7 +61,7 @@ export default function EditReview(props) {
     }} className="Form">
       <fieldset id="border">
       <legend id="legend">Edit your review</legend>
-      <textarea type='text' id='review' onChange={handleTextInput}  />
+      <textarea type='text' id='review' onChange={handleTextInput} className="Inputs" />
       <StarRating handleTextInput={handleTextInput} stars={data.stars}/>
       <button type='submit' className='button'>Post</button>
       </fieldset>
