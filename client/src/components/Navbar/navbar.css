@@ -20,21 +20,75 @@
 
 }
 
-#logoText {
-    width: 100px;
-    display: block;
-    text-align: center;
-    /* border-style: solid; */
-    margin-bottom: -60px;
-    margin-top: -10px;
-    margin-left: 25px;
+@media screen and (max-width: 768px) {
+    .logoImg {
+        width: 50px;
+        display: none;
+        text-align: center;
+        /* border-style: solid; */
+        margin-left: 20px;
+    
+    }
+    
+    .logoText {
+        width: 50px;
+        font-size: 10px;
+        text-align: center;
+        display: none;
+        margin-bottom: -60px;
+        margin-top: -10px;
+        margin-left: 25px;
+    }
+    .navLink {
+        display: inline-block;
+        /* flex-wrap: wrap; */
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        /* border-style: solid; */
+        /* border-color: red; */
+        /* background-color: ; */
+        /* margin-right: 50px; */
+        color: #FDF7FA
+    }
+    .Navbar {
+        background-color: #60435F;
+        /* border-style: solid; */
+        /* border-width: 10px; */
+        /* padding: 15px; */
+        display: inline-flexbox;
+        text-align: right;
+        color: #FDF7FA;
+        max-width: 100%;
+        /* padding-bottom: 50px; */
+    
+    }
+    .NavImg {
+        width: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 10px;
+        padding-top: 20px;
+        border-radius: 50px;
+        display: inline-flexbox;
+    }
+}
+
+.logoText {
+    width: 150px;
+        /* font-size: 10px; */
+        text-align: center;
+        display: block;
+        margin-bottom: -60px;
+        margin-top: -10px;
+        margin-left: 25px;
     
 }
 
 
 .NavImg {
     width: 50px;
-    margin-left: 20px;
+    /* margin-left: 10px; */
     margin-right: 20px;
     margin-top: -10px;
     border-radius: 40px;

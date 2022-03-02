@@ -10,11 +10,11 @@ export default function Navbar(props) {
       <div className='logoImg'>
         <Link to={'/'} className="logoLink">
       <img src='https://github.com/Jacobdye99/Review.io/blob/main/Assets/clipart2676942.png?raw=true' alt='Review.io logo' className='logoImg'/>
-      <h1 id='logoText'>Review.io</h1>
+      <h1 className='logoText'>Review.io</h1>
         </Link>
       </div>
-        <Link to='/' id='navLink'>Movies</Link>
-        <Link to='/reviews' id='navLink'>Review Feed</Link>
+        <Link to='/' id='navLink' className='navLink'>Movies</Link>
+        <Link to='/reviews' id='navLink' className='navLink'>Review Feed</Link>
         {props.currentUser ? 
         <>
             {/* <button onClick={props.logout} className="navButton"><HiLogout /></button> */}
@@ -30,8 +30,8 @@ export default function Navbar(props) {
         </>
         :
         <>
-            <Link to='/login' id='navLink'>Login</Link>
-            <Link to='/register' id='navLink'>Register</Link>
+            <Link to='/login' id='navLink' className='navLink'>Login</Link>
+            <Link to='/register' id='navLink' className='navLink'>Register</Link>
         </>    
     }
     
