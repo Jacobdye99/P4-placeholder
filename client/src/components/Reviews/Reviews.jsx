@@ -38,10 +38,12 @@ export default function Reviews(props) {
             </Link>
                 <div>
                 <button onClick={(e) => setTrigger(!trigger)} className='buttons'>Show Comments</button>
-                </div>
+                </div> 
+            <div className='comments'>
             <Popup trigger={trigger}>
-                <Comments id={review.id} />
+                <Comments id={review.id} className="comments"/>
             </Popup>
+            </div>
 
             {
               props.currentUser?.id === review.user_id ?

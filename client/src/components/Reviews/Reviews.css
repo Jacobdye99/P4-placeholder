@@ -1,7 +1,7 @@
 .fullReview {
     width: 100%;
     margin: 0 auto;
-    display: flexbox;
+    display: block;
     flex-wrap: wrap;
     gap: 20px;
     /* overflow: scroll; */
@@ -9,10 +9,10 @@
 
 .eachReview {
     background-color: white;
-        max-width: 600px;
-        max-height: 500px;
+        /* max-width: 600px;
+        max-height: 500px; */
         padding: 20px;
-        margin: 20px auto;
+        margin: 20px ;
         border-radius: 2px;
         border: .25px lightgrey solid;
 }
@@ -31,15 +31,19 @@
 }
 
 .buttons {
-    background-color: #A8DCD9;
+    background-color: #60435F;
+    color: #FDF7FA;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 10px;
 }
 
-.posters {
+ .posters {
     width: 100px;
     text-align: left;
     display: flex;
     /* margin-right: 500px; */
-}
+} 
 
 .user {
     display: flex;
@@ -54,4 +58,7 @@
 .poster_stars {
     display: flexbox;
     flex-wrap: wrap;
+}
+.comments {
+    display: flexbox
 }

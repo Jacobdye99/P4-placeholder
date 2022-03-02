@@ -1,0 +1,24 @@
+.commentDiv {
+   display: flexbox;
+   background-color: white;
+        max-width: 600px;
+        max-height: 500px;
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 2px;
+        border: .25px lightgrey solid;
+        position: relative;
+}
+
+.comment {
+    padding: 5px;
+    font-size: 14px; 
+    text-decoration: none;
+    background-color: white;
+        max-width: 600px;
+        max-height: 500px;
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 2px;
+        border: .25px lightgrey solid;
+}
