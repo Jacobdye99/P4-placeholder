@@ -6,6 +6,7 @@
     display: inline-flexbox;
     text-align: right;
     color: #FDF7FA;
+    max-width: 100%;
 
 }
 

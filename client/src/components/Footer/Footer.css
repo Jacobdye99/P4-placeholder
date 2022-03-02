@@ -1,0 +1,33 @@
+.Footer {
+        background-color: #60435F;
+        /* border-style: solid; */
+        /* border-width: 10px; */
+        /* padding: 10px; */
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flexbox;
+        text-align: center;
+        color: #FDF7FA;
+        position: absolute;
+        bottom: 0;
+        max-width: 100%;
+        width: 100%;
+        /* padding-left: 54.8%;
+        padding-right: 40%; */
+    
+}
+
+.github {
+    /* display: inline-flex;
+    flex-wrap: wrap; */
+    /* border-style: solid; */
+    margin-right: 10px;
+    text-align: center;
+    color: #FDF7FA;
+}
+
+.linkedin {
+    text-align: center;
+    color: #FDF7FA;
+    margin-left: 10px;
+}
