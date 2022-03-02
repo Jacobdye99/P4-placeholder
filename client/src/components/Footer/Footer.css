@@ -17,6 +17,17 @@
     
 }
 
+#Logout {
+    padding-top: -25px;
+    /* padding-bottom: 10px; */
+    display: block;
+    margin-top: -22px;
+    margin-right: 20px;
+    text-align: right;
+    /* position: absolute; */
+    /* margin-left: 50px; */
+}
+
 .github {
     /* display: inline-flex;
     flex-wrap: wrap; */

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './navbar.css'
+import { HiLogout } from 'react-icons/hi'
 
 export default function Navbar(props) {
   return (
@@ -16,7 +17,7 @@ export default function Navbar(props) {
         <Link to='/reviews' id='navLink'>Review Feed</Link>
         {props.currentUser ? 
         <>
-            <button onClick={props.logout} className="navButton">Log Out</button>
+            {/* <button onClick={props.logout} className="navButton"><HiLogout /></button> */}
             {props.currentUser.image !== "" ? 
             <Link to={`/user/${props.currentUser.id}`}>
                 <img src={props.currentUser.image} alt={props.currentUser.username} className='NavImg'/>

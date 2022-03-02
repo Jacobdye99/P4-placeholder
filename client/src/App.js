@@ -39,7 +39,7 @@ function App() {
     <Route path='/user/:id' element={<UserPage currentUser={currentUser} />} />
     <Route path='/login' element={<Login setCurrentUser={setCurrentUser} />} />
     </Routes>  
-    <Footer />
+    <Footer  logout={logout}/>
     </div>
   );
 }
