@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import StarRating from '../StarRating/StarRating'
 
+
 export default function EditReview(props) {
 
     // const [review, setReview] = useState('')
@@ -45,6 +46,7 @@ export default function EditReview(props) {
       console.log(data.movie_id)
 
   return (
+    <div align="center">
     <form onSubmit={(e) => {
         e.preventDefault()
         // const newReview = {
@@ -56,10 +58,14 @@ export default function EditReview(props) {
         // navigate('/reviews')
         props.handleEdit(id, data)
         console.log(stars)
-    }}>
+    }} className="Form">
+      <fieldset id="border">
+      <legend id="legend">Edit your review</legend>
       <textarea type='text' id='review' onChange={handleTextInput}  />
       <StarRating handleTextInput={handleTextInput} stars={data.stars}/>
-      <button type='submit'>Post</button>
+      <button type='submit' className='button'>Post</button>
+      </fieldset>
     </form>
+    </div>
   )
 }
