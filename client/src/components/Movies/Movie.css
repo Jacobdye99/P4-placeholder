@@ -1,0 +1,52 @@
+.fullForm {
+    display: flexbox;
+    height: 600px;
+    width: 100%;
+    position: relative
+    /* margin-top: 150px; */
+    /* justify-self: center; */
+    /* align */
+    /* margin: 25%; */
+}
+.fullSearch {
+    background-image: url("https://github.com/Jacobdye99/Review.io/blob/main/Assets/20.jpg?raw=true");
+    padding-top: 100px;
+    padding-bottom: 60px;
+    color: #FDF7FA
+}
+
+#movie_input {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #FDF7FA;
+    margin-right: 5px;
+}
+
+#movie_button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #E2A3C7;
+    /* border-style: none; */
+    border-color: #D67AB1;
+}
+
+#text {
+    background-color: #D67AB1;
+    display: inline-block;
+}
+
+#scroll {
+    max-height: 100%;
+    max-width: 100%;
+    overflow:auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.MoviePoster {
+    width: 225px;
+    margin: 10px;
+}

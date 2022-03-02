@@ -8,7 +8,7 @@
         display: flexbox;
         text-align: center;
         color: #FDF7FA;
-        position: absolute;
+        position: fixed;
         bottom: 0;
         max-width: 100%;
         width: 100%;
